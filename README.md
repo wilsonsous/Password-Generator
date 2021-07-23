@@ -1,1 +1,2 @@
 # Password-Generator
+Random Password Generator allows the user to quickly generate a password at their disposal with the choice of including lowercase/uppercase letters, numbers, and special characters once accepted.

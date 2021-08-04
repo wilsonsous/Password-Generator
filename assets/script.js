@@ -1,32 +1,32 @@
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
+let generateBtn = document.querySelector("#generate");
 // Added specified characters for functions
-var numbers = [0,1,2,3,4,5,6,7,8,9];
-var specialCharacters = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~",];
-var lowercaseCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",];
-var uppercaseCharacters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",];
+let numbers = [0,1,2,3,4,5,6,7,8,9];
+let specialChar = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~",];
+let lowerCaseChar = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",];
+let upperCaseChar = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",];
 
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  let password = generatePassword();
+  let passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 }
 
 function generatePassword() {
-  var password = "";
+  let password = "";
 
   // Created if statement for all the logic
-  var characterCount = characterCheck();
-  if (characterCount) {
+  let charCount = charCheck();
+  if (charCount) {
     // build list of possible options for passwords generated
-    var options = buildOptions();
+    let options = buildOptions();
     if (options.length != 0) {
       // loop through number of characters expected and grab random option from criteria list
-      for (var i = 0; i < characterCount; i++) {
-        var index = Math.floor(Math.random() * options.length);
+      for (let i = 0; i < charCount; i++) {
+        let index = Math.floor(Math.random() * options.length);
         password = password + options[index];
       }
     }
@@ -36,37 +36,37 @@ function generatePassword() {
 
 // <-------------------------------Prompt/Alerts for random password chosen criteria in sequential order ----------------------------->
 // If statement for prompt and alert length option
-function characterCheck() {
-  var num = prompt("Preferred password length between 8 - 128?");
-  var numberCharacters;
+function charCheck() {
+  let num = prompt("Preferred password length between 8 - 128?");
+  let numberChar;
   if (num) {
     num = parseInt(num);
     if (num >= 8 && num <= 128) {
-      numberCharacters = num;
+      numberChar = num;
     } else {
-      alert("Length of the password must be a between 8 - 128");
-      numberCharacters = characterCheck();
+      alert("Length of the password must be  between 8 - 128");
+      numberChar = charCheck();
     }
   }
-  return numberCharacters;
+  return numberChar;
 }
 
 // if statement and function for criteria character options for the user
 function buildOptions() {
-  var containsLowercase = confirm(
+  let containsLowercase = confirm(
     "Allow lowercase characters?"
   );
-  var containsUppercase = confirm(
+  let containsUppercase = confirm(
     "Allow uppercase characters?"
   );
-  var containsNumeric = confirm(
+  let containsNumeric = confirm(
     "Allow numeric characters?"
   );
-  var containsSpecial = confirm(
+  let containsSpecial = confirm(
     "Allow special characters?"
   );
 
-  var options = [];
+  let options = [];
 
   if (
     containsLowercase ||
@@ -76,11 +76,11 @@ function buildOptions() {
   ) {
     // build list of valid options to generate password from
     if (containsLowercase) {
-      options = options.concat(lowercaseCharacters);
+      options = options.concat(lowerCaseChar);
     }
 
     if (containsUppercase) {
-      options = options.concat(uppercaseCharacters);
+      options = options.concat(upperCaseChar);
     }
 
     if (containsNumeric) {
@@ -88,11 +88,11 @@ function buildOptions() {
     }
 
     if (containsSpecial) {
-      options = options.concat(specialCharacters);
+      options = options.concat(specialChar);
     }
   } else {
     // Allow user to try questions again or exit password generation
-    var tryAgain = confirm(
+    let tryAgain = confirm(
       "Requires at least one criteria for random password generate!"
     );
     if (tryAgain) {
@@ -104,3 +104,4 @@ function buildOptions() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+

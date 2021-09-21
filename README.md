@@ -6,6 +6,7 @@
 
   # Table of Contents 
   * [Link](#Link)
+  * [Visuals](#Visuals)
   * [Usage](#usage)
   * [License](#license)
   * [Contributing](#contributing)
@@ -13,6 +14,8 @@
   
   # Link 
   Link to deployed application : https://wilsonsous.github.io/Password-Generator/
+  # Visuals
+  ![alt text]https://raw.githubusercontent.com/wilsonsous/Portfolio/main/Images/generator.png
   # Usage
   ​This application is used for any users looking for a quick random password.
   # License

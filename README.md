@@ -15,7 +15,7 @@
   # Link 
   Link to deployed application : https://wilsonsous.github.io/Password-Generator/
   # Visuals
-  ![alt text] (https://raw.githubusercontent.com/wilsonsous/Portfolio/main/Images/generator.png)
+  <img width="1792" alt="generator" src="https://user-images.githubusercontent.com/78562158/134107660-2824c3e2-4057-4c00-a174-f2f53d19fe5e.png">
   # Usage
   ​This application is used for any users looking for a quick random password.
   # License

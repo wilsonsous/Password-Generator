@@ -17,6 +17,9 @@
   # Visuals
   <img width="1792" alt="generator" src="https://user-images.githubusercontent.com/78562158/134107660-2824c3e2-4057-4c00-a174-f2f53d19fe5e.png">
   
+  ![Screen Shot 2021-09-24 at 3 12 03 AM (2)](https://user-images.githubusercontent.com/78562158/134633495-99da2d2b-de70-4382-b751-82b681054425.png)
+
+  
   # Usage
   ​This application is used for any users looking for a quick random password.
   

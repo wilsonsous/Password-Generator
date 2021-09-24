@@ -29,9 +29,6 @@
   ​This application is used for any users looking for a quick random password.
   
   # License
-  This project currently has no license.
-  
-  # Contributing
 MIT License
 
 Copyright (c) 2021 Wilson Sous

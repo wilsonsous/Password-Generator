@@ -1,7 +1,7 @@
  # Password Generator
 
  # Description
-   Random Password Generator allows the user to quickly generate a password at their disposal with the choice of including lowercase/uppercase letters, numbers, and   special characters once accepted.
+   Random Password Generator allows the user to quickly generate a password at their disposal. The user will also have the choice of including lowercase/uppercase letters, numbers, and   special characters once accepted.
    
    # Technologies used
    - HTML
